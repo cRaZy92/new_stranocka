@@ -6,7 +6,7 @@ if(!isset($_SESSION['signed_in']))
     include "chyba_prihlasenia.php";
     die;
 }
-    $titulok="Učivo";
+    $title="Učivo";
     include "html_hlavicka.php";
     include "body_start.php";
 ?>
@@ -43,11 +43,41 @@ if(isset($_POST['ok'])){
 $vyber=$_POST['ucivo'];
 
 switch($vyber){
+    case "part_1":
+    include_once "content/cvi/part_1.php";
+    break;
+    case "part_2":
+    include_once "content/cvi/part_2.php";
+    break;
+    case "part_3":
+    include_once "content/cvi/part_3.php";
+    break;
+    case "part_4":
+    include_once "content/cvi/part_4.php";
+    break;
+    case "part_5":
+    include_once "content/cvi/part_5.php";
+    break;
+    case "part_6":
+    include_once "content/cvi/part_6.php";
+    break;
+    case "part_7":
+    include_once "content/cvi/part_7.php";
+    break;
+    case "part_8":
+    include_once "content/cvi/part_8.php";
+    break;
+    case "part_9":
+    include_once "content/cvi/part_9.php";
+    break;
+    case "part_10":
+    include_once "content/cvi/part_10.php";
+    break;
     case "sql_databazy":
-    include_once "content_sql_databazy.php";
+    include_once "content/content_sql_databazy.php";
     break;
     case "php_databazy":
-    include_once "content_php_databazy.php";
+    include_once "content/content_php_databazy.php";
     break;
 }
 }
